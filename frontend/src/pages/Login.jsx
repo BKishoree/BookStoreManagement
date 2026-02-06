@@ -30,9 +30,9 @@ export default function Login() {
       <div className="login-left">
         <div className="login-branding">
           <div className="logo-large">📚</div>
-          <h1 className="brand-title">Library Management System</h1>
+          <h1 className="brand-title">Books Management System</h1>
           <p className="brand-tagline">
-            Streamline your library operations with our comprehensive management solution
+            Streamline your books operations with our comprehensive management solution
           </p>
         </div>
         
@@ -40,7 +40,7 @@ export default function Login() {
           <div className="feature-item">
             <div className="feature-icon">📖</div>
             <div className="feature-text">
-              <strong>Book Management</strong>
+              <strong>Books</strong>
               <span>Organize and track your entire collection</span>
             </div>
           </div>
@@ -49,13 +49,6 @@ export default function Login() {
             <div className="feature-text">
               <strong>Staff Coordination</strong>
               <span>Manage team members and permissions</span>
-            </div>
-          </div>
-          <div className="feature-item">
-            <div className="feature-icon">📊</div>
-            <div className="feature-text">
-              <strong>Analytics & Reports</strong>
-              <span>Data-driven insights for better decisions</span>
             </div>
           </div>
         </div>
