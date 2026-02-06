@@ -103,13 +103,13 @@ export default function Login() {
               </div>
             </div>
 
-            <div className="form-options">
+            {/* <div className="form-options">
               <label className="checkbox-label">
                 <input type="checkbox" />
                 <span>Remember me</span>
               </label>
               <a href="#" className="forgot-link">Forgot password?</a>
-            </div>
+            </div> */}
             
             <button 
               type="submit" 
@@ -130,9 +130,9 @@ export default function Login() {
             </button>
           </form>
 
-          <div className="form-footer">
+          {/* <div className="form-footer">
             <p>Need help? Contact your administrator</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

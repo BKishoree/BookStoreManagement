@@ -27,8 +27,6 @@ class UserService {
     if (existingUser) {
       throw new Error('Email already exists');
     }
-    console.log("userdata ", userData);
-
     return userRepository.createUser({
       ...userData,
       accounttype: 'INDIVIDUAL',

@@ -46,6 +46,13 @@ class UserRepository {
     return result.rows[0];
   }
 
+  async findAdmin() {
+    const result = await db.query(
+      `SELECT * FROM identity.users WHERE accounttype = 'ADMIN' LIMIT 1`
+    );
+    return result.rows[0];
+  }
+
   async createUser(user) {
     const {
       name,

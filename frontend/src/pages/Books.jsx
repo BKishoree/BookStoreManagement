@@ -7,7 +7,7 @@ export default function Books() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
-  const [viewMode, setViewMode] = useState('grid');
+  const [viewMode, setViewMode] = useState('list');
   
   // Popup states
   const [popup, setPopup] = useState({
@@ -155,7 +155,7 @@ export default function Books() {
         </div> */}
 
         <div className="control-actions">
-          <div className="view-toggle">
+          {/* <div className="view-toggle">
             <button 
               className={viewMode === 'grid' ? 'active' : ''}
               onClick={() => setViewMode('grid')}
@@ -170,7 +170,7 @@ export default function Books() {
             >
               ☰
             </button>
-          </div>
+          </div> */}
 
           <button className="btn btn-primary" onClick={() => setShowAddForm(true)}>
             <span>➕</span>
@@ -235,9 +235,9 @@ export default function Books() {
                     <span className="view-label">Created By:</span>
                     <span className="view-value">
                       {viewBook.createdBy === 'MySelf' ? (
-                        <span className="creator-chip myself">👤 You</span>
+                        <span className="creator-chip myself">👤 MySelf</span>
                       ) : (
-                        <span className="creator-chip other">👤 {viewBook.createdBy || 'Unknown'}</span>
+                        <span className="creator-chip other">👤 {viewBook.createdBy}</span>
                       )}
                     </span>
                   </div>
@@ -372,9 +372,9 @@ export default function Books() {
                     </div>
                     <div className="book-creator">
                       {book.createdBy === 'MySelf' ? (
-                        <span className="creator-chip myself">👤 You</span>
+                        <span className="creator-chip myself">👤 MySelf</span>
                       ) : (
-                        <span className="creator-chip other">👤 {book.createdBy || 'Unknown'}</span>
+                        <span className="creator-chip other">👤 {book.createdBy}</span>
                       )}
                     </div>
                   </div>
@@ -412,7 +412,7 @@ export default function Books() {
                       {book.stock > 0 ? `${book.stock} available` : 'Out of stock'}
                     </span>
                     {book.createdBy === 'MySelf' ? (
-                      <span className="creator-badge myself">👤 You</span>
+                      <span className="creator-badge myself">👤 MySelf</span>
                     ) : (
                       <span className="creator-badge other">👤 {book.createdBy}</span>
                     )}
